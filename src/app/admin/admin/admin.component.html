@@ -1,2 +1,62 @@
-<h2>Admin Pages</h2>
+<ng-container>
+    <!--toolbar-->
+    <mat-toolbar color="primary" class="example-header">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>I - Apotek</span>
+        <div class="uk-width-expand"></div>
+       
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>perm_identity</mat-icon>
+        </button>
+        <small>Admin</small>
+        <button mat-button class="mini-title" routerLink="/login">LogOut</button>
+    </mat-toolbar>
+    <!--end toolbar-->
+    
+    <mat-sidenav-container class="example-container">
+    
+      <mat-sidenav #sidenav mode="side" 
+      [position]="'start'" 
+      opened class="sidenav-left"
+      [fixedInViewport]="true" 
+      [fixedTopGap]="60"
+      [fixedBottomGap]="0">
+    
+      
+      <mat-nav-list>
+        <mat-list-item routerLink="/admin/dashboard">
+            <mat-icon matListIcon>dashboard</mat-icon>
+            <h3 matLine>Dashboard</h3>
+        </mat-list-item>
+        
+        <mat-list-item routerLink="/admin/product">
+        <mat-icon matListIcon>inventory</mat-icon>
+        <h3 matLine>Daftar Obat</h3>
+        </mat-list-item>
+
+        </mat-nav-list>
+    
+      </mat-sidenav>
+    
+    <mat-sidenav #sidenav mode="side" [position]="'end'"  class="example-sidenav"
+    [fixedInViewport]="true" [fixedTopGap]="60"
+    [fixedBottomGap]="0">
+    
+       
+    
+    </mat-sidenav>
+    <!--sidenav content-->
+    <mat-sidenav-content style="padding: 20px; background-color: #ccc;">
+    <!--halaman-halaman tampil disini-->
+    
+   
 <router-outlet></router-outlet>
+    
+    
+    
+    </mat-sidenav-content>
+    <!--end sidenav content-->
+    </mat-sidenav-container>   
+    </ng-container>

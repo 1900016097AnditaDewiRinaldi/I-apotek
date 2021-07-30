@@ -1,0 +1,45 @@
+<h3 mat-dialog-title>
+    Detail Obat
+ </h3>
+ <div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Nama Obat</mat-label>
+        <input matInput [(ngModel)]="data.Obat">      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Golongan</mat-label>
+        <input matInput [(ngModel)]="data.Golongan" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Satuan</mat-label>
+        <input matInput [(ngModel)]="data.Satuan" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Tanggal Masuk</mat-label>
+        <input matInput type="date" [(ngModel)]="data.Tanggal_Masuk" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Expired</mat-label>
+        <input matInput  type="date" [(ngModel)]="data.Ex" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Harga</mat-label>
+        <input matInput type="number" [(ngModel)]="data.Harga" >      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Jumlah masuk</mat-label>
+        <input matInput [(ngModel)]="data.Jumlah_masuk" >      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Jumlah keluar</mat-label>
+        <input matInput [(ngModel)]="data.Jumlah_keluar" >      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Sisa</mat-label>
+        <input matInput [(ngModel)]="data.Sisa" >      
+    </mat-form-field>
+ </div>
+ <div mat-dialog-actions align="end">
+ <button mat-button mat-dialog-close>Batal</button>
+ <button mat-flat-button (click)="saveData()" [disabled]="loading">{{loading ? 'Menyimpan..':'Simpan'}}</button>
+</div> 

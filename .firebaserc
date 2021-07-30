@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "i-apotek": {
+      "hosting": {
+        "my-projectakhir": [
+          "i-apotek"
+        ]
+      }
+    }
+  }
+}

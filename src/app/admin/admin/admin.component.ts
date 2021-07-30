@@ -12,4 +12,12 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mode: string ='side';
+  menu = [
+    {
+      name:'Dashboard',
+      icon:'dashboard',
+      url:'/admin/dashboard'
+    },
+  ]
 }
